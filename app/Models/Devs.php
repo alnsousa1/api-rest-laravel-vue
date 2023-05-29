@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Devs extends Model
 {
     use HasFactory;
+
+    protected $table = 'developers';
+    protected $fillable = ['name', 'id_level'];
 }
