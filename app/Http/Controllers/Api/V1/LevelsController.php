@@ -21,13 +21,13 @@ class LevelsController extends Controller
         return new LevelsResource($level);
     }
 
-    public function store(StoreLevelsRequest $request)
+    public function store(Request $request)
     {
-        Levels::create($request->validated());
+        Levels::create($request->all());
         return response()->json("Level Created");
     }
 
-    public function update(StoreLevelsRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $level = Levels::findOrFail($id);
         $level->update($request->all());
