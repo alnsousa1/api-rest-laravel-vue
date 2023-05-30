@@ -49,6 +49,7 @@ export default function useLevels() {
             await axios.delete("levels/" + id);
             await getLevels();
         };
+          
 
         return {
             level,

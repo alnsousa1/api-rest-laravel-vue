@@ -2,7 +2,7 @@
     import { reactive } from 'vue';
     import useLevels from '../../composables/levels';
 
-    const { storeLevel, errors } = useLevels();
+    const { storeLevel, errors, showAlert } = useLevels();
 
     const form = reactive({
         name: ""

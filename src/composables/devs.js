@@ -47,7 +47,7 @@ export default function useDevs() {
                 return;
             }
             await axios.delete("devs/" + id);
-            await getLevels();
+            await getDevs();
         };
 
         return {
