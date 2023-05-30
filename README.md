@@ -13,15 +13,14 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 De que coisas você precisa para instalar o software e como instalá-lo?
 - Php (7.4.33)
-- Node.js (v16.14.2.) - (vue/cli 5.0.8 + composer)
-- XAMPP / MAMP
+- Node.js (v16.14.2.) - (vue/cli 5.0.8 + Composer)
+- MySQL
 
 
 🔧 Instalação
 
 - Clone o projeto utilizando o comando **git clone https://github.com/alnsousa1/api-rest-laravel-vue.git**
-- Inicie o XAMPP / MAMP (Apache+MySQL)
-- Ao abrir o projeto no VSCODE, abra o terminal e rode um **npm install**
+- Ao abrir o projeto no VSCODE, entre na pasta **backend**, abra o terminal e rode o comando **composer install**
 - Em seguida, rode um **php artisan serve** (o servidor irá subir na porta 8000, podendo ser acessado no navegador por localhost:8000/levels ou localhost:8000/devs, para visualizar dados da API)
-- Após isso, abra uma outra aba do terminal e rode o comando **npm run dev** (o servidor irá subir na porta 3000, podendo ser acessado no navegador por localhost:3000)
+- Continuando, entre na pasta **frontend**, abra uma outra aba do terminal, rode o comando **npm install** e o comando **npm run dev** (o servidor irá subir na porta 3000, podendo ser acessado no navegador por localhost:3000)
 
