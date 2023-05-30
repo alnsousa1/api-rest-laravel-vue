@@ -21,6 +21,6 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 
 - Clone o projeto utilizando o comando **git clone https://github.com/alnsousa1/api-rest-laravel-vue.git**
 - Ao abrir o projeto no VSCODE, entre na pasta **backend**, abra o terminal e rode o comando **composer install**
-- Em seguida, rode um **php artisan serve** (o servidor irá subir na porta 8000, podendo ser acessado no navegador por localhost:8000/levels ou localhost:8000/devs, para visualizar dados da API)
+- Em seguida, rode um **php artisan serve** (o servidor irá subir na porta 8000)
 - Continuando, entre na pasta **frontend**, abra uma outra aba do terminal, rode o comando **npm install** e o comando **npm run dev** (o servidor irá subir na porta 3000, podendo ser acessado no navegador por localhost:3000)
 
