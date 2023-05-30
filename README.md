@@ -1,6 +1,6 @@
 # Teste Gazin - API RESTfull - Laravel+Vue.js
 ## Vaga de Desenvolvedor
-Projeto desenvolvido em PHP, utilizando o framework Laravel (versão) no backend e o framework Vue.js no frontend.
+Projeto desenvolvido em PHP, utilizando o framework Laravel 8 no backend e o framework Vue.js 5.0.8 no frontend.
 
 O projeto consiste em 2 CRUDS, um de desenvolvedores e um de níveis, consumindo uma API RESTfull.
 
@@ -10,15 +10,16 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 📋 Pré-requisitos
 De que coisas você precisa para instalar o software e como instalá-lo?
-- Php (versão)
-- Node (versão) - (Vue+composer)
+- Php (7.4.33)
+- Node.js (v16.14.2.) - (vue/cli 5.0.8 + composer)
 - XAMPP / MAMP
 
 
 🔧 Instalação
 
 - Clone o projeto utilizando o comando **git clone https://github.com/alnsousa1/api-rest-laravel-vue.git**
-- Crie o arquivo .env e adicione as seguintes configurações: (colar aqui o .env)
-- No terminal do VSCODE, rode o comando **git checkout creating_api_rest_full_laravel_+_vue.js** para acessar a branch em que está o código da API e rode o comando php artisan serve, para subir o servidor. (caso queira visualizar os da API no navegador, acesse localhost:8000/levels ou localhost:8000/devs)
-- Abra outra aba do terminal, rode um **git checkout main** e logo após um **git checkout add-vue-in-project** para acessar a branch em que está o código Vue.js, e rode um **npm run dev**. O servidor estará rodando na porta 3000. Para acessar, basta digitar localhost:3000 no navegador.
+- Inicie o XAMPP / MAMP (Apache+MySQL)
+- Ao abrir o projeto no VSCODE, abra o terminal e rode um **npm install**
+- Em seguida, rode um **php artisan serve** (o servidor irá subir na porta 8000, podendo ser acessado no navegador por localhost:8000/levels ou localhost:8000/devs, para visualizar dados da API)
+- Após isso, abra uma outra aba do terminal e rode o comando **npm run dev** (o servidor irá subir na porta 3000, podendo ser acessado no navegador por localhost:3000)
 
