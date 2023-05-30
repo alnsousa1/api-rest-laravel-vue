@@ -10,6 +10,7 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 
 📋 Pré-requisitos
+
 De que coisas você precisa para instalar o software e como instalá-lo?
 - Php (7.4.33)
 - Node.js (v16.14.2.) - (vue/cli 5.0.8 + composer)
