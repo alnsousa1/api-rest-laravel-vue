@@ -43,9 +43,6 @@ export default function useLevels() {
         };
 
         const destroyLevel = async(id) => {
-            if(!window.confirm("Você tem certeza?")){
-                return;
-            }
             await axios.delete("levels/" + id);
             await getLevels();
         };

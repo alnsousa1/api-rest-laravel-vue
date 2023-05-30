@@ -43,9 +43,6 @@ export default function useDevs() {
         };
 
         const destroyDev = async(id) => {
-            if(!window.confirm("Você tem certeza?")){
-                return;
-            }
             await axios.delete("devs/" + id);
             await getDevs();
         };

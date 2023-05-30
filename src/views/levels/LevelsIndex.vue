@@ -1,10 +1,33 @@
 <script setup>
 import useLevels from "../../composables/levels";
 import { onMounted } from "vue";
+import Swal from 'sweetalert2';
 
 const { levels, getLevels, destroyLevel } = useLevels();
 
 onMounted(() => getLevels());
+
+const confirmDelete = (levelId) => {
+    Swal.fire({
+        title: 'Tem certeza?',
+        text: 'Esta ação não pode ser desfeita.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#DC2626',
+        cancelButtonColor: '#4F46E5',
+        confirmButtonText: 'Sim, excluir!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            destroyLevel(levelId);
+            Swal.fire(
+                'Excluído!',
+                'O nível foi excluído com sucesso.',
+                'success'
+            );
+        }
+    });
+};
 </script>
 <template>
     <div class="mt-12">
@@ -40,9 +63,8 @@ onMounted(() => getLevels());
                             Nome
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Desenvolvedores
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="px-6 py-3 flex justify-end mr-12">
                             Opções
                         </th>
                     </tr>
@@ -52,10 +74,10 @@ onMounted(() => getLevels());
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <td class="py-4 px-6">{{ level.name }}</td>
                         <td class="py-4 px-6"></td>
-                        <td class="py-4 px-6 space-x-2">
+                        <td class="py-4 px-6 space-x-2 flex justify-end">
                             <RouterLink :to="{ name: 'LevelsEdit', params: { id: level.id } }"
                                 class="px-4 py-2 bg-green-500 hover:bg-green-700 text-white rounded">Editar</RouterLink>
-                            <button @click="destroyLevel(level.id)"
+                            <button @click="confirmDelete(level.id)"
                                 class="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded">
                                 Excluir
                             </button>
